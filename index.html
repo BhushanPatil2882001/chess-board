@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                        <path d="M160-80v-200q88-60 129-125t56-115H240v-80h90q-14-22-22-47t-8-53q0-75 52.5-127.5T480-880q75 0 127.5 52.5T660-700q0 28-8 53t-22 47h90v80H615q15 50 56 115t129 125v200H160Zm80-80h480v-80q-92-72-133-148.5T532-520H428q-14 55-55 131.5T240-240v80Zm240-440q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm0 440Zm0-540Z"/>
+                    </svg>
+                </div>
+                <div class="logo-text-1">Chess</div>
+                <div class="logo-text-2">BOARD</div>
+            </div>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+            </label>
+            <label for="sidebar-active" id="overlay"></label>
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </label>
+                <a href="#">Home</a>
+                <a href="#">Play online</a>
+                <a href="#">Multiplayer</a>
+                <a href="#">Ranking</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="chessboard">
+                <!-- Black Pieces -->
+                <div class="square black bk-rook"></div>
+                <div class="square white bk-knight"></div>
+                <div class="square black bk-bishop"></div>
+                <div class="square white bk-queen"></div>
+                <div class="square black bk-king"></div>
+                <div class="square white bk-bishop"></div>
+                <div class="square black bk-knight"></div>
+                <div class="square white bk-rook"></div>
+
+                <div class="square white bk-pawn"></div>
+                <div class="square black bk-pawn"></div>
+                <div class="square white bk-pawn"></div>
+                <div class="square black bk-pawn"></div>
+                <div class="square white bk-pawn"></div>
+                <div class="square black bk-pawn"></div>
+                <div class="square white bk-pawn"></div>
+                <div class="square black bk-pawn"></div>
+
+                <!-- Empty Squares -->
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+
+                <!-- White Pieces -->
+                <div class="square black pawn"></div>
+                <div class="square white pawn"></div>
+                <div class="square black pawn"></div>
+                <div class="square white pawn"></div>
+                <div class="square black pawn"></div>
+                <div class="square white pawn"></div>
+                <div class="square black pawn"></div>
+                <div class="square white pawn"></div>
+
+                <div class="square white rook"></div>
+                <div class="square black knight"></div>
+                <div class="square white bishop"></div>
+                <div class="square black king"></div>
+                <div class="square white queen"></div>
+                <div class="square black bishop"></div>
+                <div class="square white knight"></div>
+                <div class="square black rook"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

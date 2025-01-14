@@ -1,0 +1,272 @@
+:root {
+    /* Navbar Colors */
+    --logo-clr: rgb(211, 211, 211);
+    --nav-text-color: rgb(255, 255, 255);
+    /* Hover Effects */
+    --hover-bg-clr: rgb(211, 211, 211);
+    --hover-text-clr: rgb(88, 88, 88);
+    --hover-drop-shadow: 3px 5px 15px 0px #000000;
+    --nav-bar-gradient: linear-gradient(0deg, rgba(11, 11, 11, 1) 0%, rgba(36, 195, 183, 1) 93%, rgba(11, 209, 204, 1) 100%);
+    /* Background */
+    --background-gradient: linear-gradient(184deg, rgba(11, 11, 11, 1) 0%, rgba(36, 195, 183, 1) 53%, rgba(11, 209, 204, 1) 100%);
+    /* Chessboard */
+    --black-square: rgb(75, 75, 75);
+    --white-square: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Main Navigation Bar */
+.navbar {
+    max-width: 1322px;
+    margin: auto;
+    color: var(--nav-bar-color);
+    display: flex;
+    align-items: center;
+    background: var(--nav-bar-gradient);
+    height: 90px;
+    border-radius: 0 0 20px 20px;
+}
+
+.logo {
+    margin-left: 20px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo:active {
+    transform: scale(0.9);
+}
+
+.logo-image svg {
+    height: 25px;
+    width: 25px;
+    fill: var(--logo-clr);
+}
+
+.logo-text-1, .logo-text-2 {
+    color: var(--logo-clr);
+}
+
+.logo-text-1 {
+    font-size: 1.2rem;
+}
+
+.logo-text-2 {
+    font-size: 1.5rem;
+}
+
+.links-container {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container a {
+    color: var(--nav-text-color);
+    cursor: pointer;
+    padding: 15px 10px;
+    transition: all 0.2s linear;
+    border-radius: 10px;
+}
+
+.links-container a:hover {
+    background-color: var(--hover-bg-clr);
+    color: var(--hover-text-clr);
+    box-shadow: var(--hover-drop-shadow);
+}
+
+.links-container a:active {
+    transform: scale(0.9);
+}
+
+/* Sidebar */
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: none;
+}
+
+/* Chessboard Styles */
+body {
+    background: var(--background-gradient);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section {
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chessboard {
+    width: 640px;
+    height: 640px;
+    box-shadow: 9px 15px 20px 3px #000000;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    float: left;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.square:hover {
+    transform: scale(1.1);
+}
+
+.square:active {
+    scale: 0.95;
+}
+
+.black {
+    background-color: var(--black-square);
+    color: white;
+}
+
+.white {
+    background-color: var(--white-square);
+}
+
+.bk-pawn, .pawn {
+    background-size: cover;
+}
+
+.bk-pawn {
+    background-image: url(../images/bk-pawn.png);
+}
+
+.pawn {
+    background-image: url(../images/pawn.png);
+}
+
+.bk-rook, .rook {
+    background-size: cover;
+}
+
+.bk-rook {
+    background-image: url(../images/bk-rook.png);
+}
+
+.rook {
+    background-image: url(../images/rook.png);
+}
+
+.bk-knight, .knight {
+    background-size: cover;
+}
+
+.bk-knight {
+    background-image: url(../images/bk-knight.png);
+}
+
+.knight {
+    background-image: url(../images/knight.png);
+}
+
+.bk-bishop, .bishop {
+    background-size: cover;
+}
+
+.bk-bishop {
+    background-image: url(../images/bk-bishop.png);
+}
+
+.bishop {
+    background-image: url(../images/bishop.png);
+}
+
+.bk-queen, .queen {
+    background-size: cover;
+}
+
+.bk-queen {
+    background-image: url(../images/bk-queen.png);
+}
+
+.queen {
+    background-image: url(../images/queen.png);
+}
+
+.bk-king, .king {
+    background-size: cover;
+}
+
+.bk-king {
+    background-image: url(../images/bk-king.png);
+}
+
+.king {
+    background-image: url(../images/king.png);
+}
+
+/* Media Queries */
+@media (max-width: 650px) {
+    .chessboard {
+        height: 320px;
+        width: 320px;
+    }
+
+    .square {
+        height: 40px;
+        width: 40px;
+    }
+
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        height: 100%;
+        background-color: var(--black-square);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.3s ease-out;
+    }
+
+    .links-container a {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+        padding: 20px;
+        display: block;
+    }
+
+    #sidebar-active:checked ~ .links-container {
+        right: -4%;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
