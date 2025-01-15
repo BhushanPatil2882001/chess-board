@@ -390,4 +390,16 @@ section {
         backdrop-filter: blur(4px);
         transition: 0.3s ease-in;
     }
+
+    /* footer */
+    .about .columns{
+        grid-template-columns: 1fr;
+    }
+    .about .columns ul li{
+        width: 200px;
+    }
+    .column-1, .column-2{
+        border-bottom: 1px solid black;
+        display: flexs;
+    }
 }
