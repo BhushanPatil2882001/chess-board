@@ -2,7 +2,7 @@
 
 :root {
     /* Navbar Colors */
-    --logo-clr: rgb(255, 255, 255);
+    --logo-clr: lightblue;
     --nav-text-color: rgb(255, 255, 255);
     /* Hover Effects */
     --hover-bg-clr: black;
@@ -221,7 +221,8 @@ section {
 }
 
 .square:active {
-    scale: 0.95;
+    transform:scale(0.9);
+    border-radius: 10px;
 }
 
 .black {
